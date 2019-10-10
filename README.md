@@ -15,4 +15,4 @@ I DID NOT CREATE ANY OF THIS ONLY EDITED FOR FRIENDS BUT HELPFUL
 
 ---Edit your start command line how you would normally
 
----Add your steam login info for servers that require it for download example (+login "Username Password"
+---Add your steam login info for servers that require it for download example (+login "Username Password")
