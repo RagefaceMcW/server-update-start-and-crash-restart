@@ -9,6 +9,8 @@ I DID NOT CREATE ANY OF THIS ONLY EDITED FOR FRIENDS BUT HELPFUL
 
 ---Edit your server names based on game
 
+---Edit APPID to server's APPID from steam
+
 ---Edit your steamcmd folder (download and install from scteamcmd.com)
 
 ---Edit your folder paths for server location
