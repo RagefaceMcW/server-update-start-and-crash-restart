@@ -5,10 +5,11 @@
 ::=======================::
 set programname=SteamCMD Server Downloader/Updater
 
-::=======================::
-::  Steam log-in info    ::
-::    Replace after =    ::
-::=======================::
+::======================::
+::  Steam log-in info   ::
+::    Replace after =   ::
+:: With your Steam info ::
+::======================::
 set username=STEAMUSERNAME
 set password=PASSWORD
 
@@ -16,13 +17,13 @@ set password=PASSWORD
 ::   SteamCMD folder     ::
 ::    Replace after =    ::
 ::=======================::
-set runcmd=C:\SteamCMD\
+set runcmd=D:\SteamCMD\
  
 ::=======================::
 ::    Server folder      ::
 ::    Replace after =    ::
 ::=======================::
-set setser=C:\Servers\
+set setser=D:\Servers\
 
 ::=======================::
 ::   End of variables    ::
@@ -57,8 +58,27 @@ ECHO   # 9 - Mordhau Dedicated Server                               #
 ECHO   # 0 - Space Engineers Dedicated Server                       #
 ECHO   # A - Arma 3 Dedicated Server                                #
 ECHO   # B - Rust Dedicated Server                                  #
-:: ECHO   # C - EXTRA OPTION Dedicated Server                       #
-:: ECHO   # D - EXTRA OPTION Dedicated Server                       #
+ECHO   # C - ARK: Survival Evolved Dedicated Server                 #
+ECHO   # D - Brink Dedicated Server                                 #
+:: ECHO   # E - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # F - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # G - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # I - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # J - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # K - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # L - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # M - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # N - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # P - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # R - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # S - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # T - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # U - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # V - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # W - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # X - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # Y - EXTRA OPTION Dedicated Server                          #
+:: ECHO   # Z - EXTRA OPTION Dedicated Server                          #
 ECHO   # H - HELP!                                                  #
 ECHO   # Q - Exit                                                   #
 ECHO   ##############################################################
@@ -81,8 +101,28 @@ IF "%A%"=="9" set app=629800
 IF "%A%"=="0" set app=298740
 IF "%A%"=="A" set app=233780
 IF "%A%"=="B" set app=258550
-:: IF "%A%"=="C" set app=CHANGEME
-:: IF "%A%"=="D" set app=CHANGEME
+IF "%A%"=="C" set app=376030
+IF "%A%"=="D" set app=72780
+:: IF "%A%"=="E" set app=CHANGEME
+:: IF "%A%"=="F" set app=CHANGEME
+:: IF "%A%"=="G" set app=CHANGEME
+:: IF "%A%"=="I" set app=CHANGEME
+:: IF "%A%"=="J" set app=CHANGEME
+:: IF "%A%"=="K" set app=CHANGEME
+:: IF "%A%"=="L" set app=CHANGEME
+:: IF "%A%"=="M" set app=CHANGEME
+:: IF "%A%"=="N" set app=CHANGEME
+:: IF "%A%"=="O" set app=CHANGEME
+:: IF "%A%"=="P" set app=CHANGEME
+:: IF "%A%"=="R" set app=CHANGEME
+:: IF "%A%"=="S" set app=CHANGEME
+:: IF "%A%"=="T" set app=CHANGEME
+:: IF "%A%"=="U" set app=CHANGEME
+:: IF "%A%"=="V" set app=CHANGEME
+:: IF "%A%"=="W" set app=CHANGEME
+:: IF "%A%"=="X" set app=CHANGEME
+:: IF "%A%"=="Y" set app=CHANGEME
+:: IF "%A%"=="Z" set app=CHANGEME
 IF "%A%"=="H" ECHO.
 IF "%A%"=="H" ECHO https://developer.valvesoftware.com/wiki/SteamCMD
 IF "%A%"=="H" ECHO.
@@ -100,7 +140,7 @@ ECHO Watching %servername% for crashes...
 >> "%servername%.log" ECHO (%date%)(%time%) Watching %servername% for crashes...
  
 ::Start the actual update window
-start /wait steamcmd +login %username% %password% +force_install_dir %setser%%app%Server\ +app_update %app% validate
+start /wait steamcmd +force_install_dir %setser%%app%Server\ +login %username% %password% +app_update %app% validate
 ECHO (%time%) WARNING: srcds closed or crashed, restarting.
 ECHO.
 ECHO (%date%)(%time%) Crash or Close detected!
